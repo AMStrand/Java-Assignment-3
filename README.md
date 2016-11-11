@@ -2,7 +2,7 @@
 ## Due 11-14-2016
 ## Author
 
-
+Alyssa Strand
 
 ## Description
 
@@ -66,6 +66,9 @@ Through File System:   app/src/main/res/raw/
 
 ## Outside Resources Used
 
-
+How to make each layout element take up half the screen: http://stackoverflow.com/questions/2581481/assign-width-to-half-available-screen-width-declaratively
+Format with currency symbol: http://stackoverflow.com/questions/10826850/java-string-format-with-currency-symbol
 
 ## Known Problems, Issues, And/Or Errors in the Program
+
+None.

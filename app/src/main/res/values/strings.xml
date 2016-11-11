@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">CIS298Assignment3</string>
+    <string name="app_name">WineItemList</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="wine_description_hint">Enter a description for the wine item.</string>
+    <string name="wine_description_label">Name</string>
+    <string name="wine_id_label">Id:</string>
+    <string name="wine_pack_label">Pack:</string>
+    <string name="wine_price_label">Price:</string>
+    <string name="wine_active_label">Active:</string>
+
+    <string name="new_wine_item">New Wine Item</string>
+
 </resources>
