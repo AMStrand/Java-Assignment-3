@@ -32,7 +32,7 @@ public class WineFragment extends Fragment{
     private CheckBox mActiveCheckBox;
 
         // Public method to start a new instance of the wine fragment:
-    public static WineFragment newInstance(int Id) {
+    public static WineFragment newInstance(String Id) {
             // Create a bundle and add the wine id as a serializable extra:
         Bundle args = new Bundle();
         args.putSerializable(ARG_WINE_ID, Id);
@@ -47,7 +47,7 @@ public class WineFragment extends Fragment{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
             // Save the serializable extra as the wine item id:
-        int wineId = (int) getArguments().getSerializable(ARG_WINE_ID);
+        String wineId = (String) getArguments().getSerializable(ARG_WINE_ID);
             // Find the wine item with that id:
         mWineItem = WineList.get(getActivity()).getWineItem(wineId);
     }
@@ -83,7 +83,7 @@ public class WineFragment extends Fragment{
                 // Save it as it changes, setting the id of the wine item:
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                mWineItem.setmId(Integer.parseInt(charSequence.toString()));
+                mWineItem.setmId(charSequence.toString());
             }
 
             @Override public void afterTextChanged(Editable editable) {}

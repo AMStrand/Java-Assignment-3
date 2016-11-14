@@ -49,7 +49,7 @@ public class WineList {
     }
 
         // Public method to find a specific wine item by id:
-    public WineItem getWineItem(int id) {
+    public WineItem getWineItem(String id) {
             // Loop through the wine items:
         for (WineItem wineItem : sWineItemList) {
                 // If the id matches, return that wine item:
@@ -76,7 +76,7 @@ public class WineList {
                     // Split the line by commas into the variables, save in array:
                 String[] parts = line.split(",");
                     // Save each part in an appropriate variable, parsing where necessary:
-                int id = Integer.parseInt(parts[0]);
+                String id = parts[0];
                 String description = parts[1];
                 String packSize = parts[2];
                 double price = Double.parseDouble(parts[3]);

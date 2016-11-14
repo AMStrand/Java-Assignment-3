@@ -22,7 +22,7 @@ public class WinePagerActivity extends AppCompatActivity{
     private List<WineItem> mWineItems;
 
         // Public method to retrieve the intent to begin this activity:
-    public static Intent newIntent(Context packageContext, int wineId) {
+    public static Intent newIntent(Context packageContext, String wineId) {
             // Create a new intent with this context:
         Intent intent = new Intent(packageContext, WinePagerActivity.class);
             // Add the wine item id as a serializable extra in the intent:
@@ -37,7 +37,7 @@ public class WinePagerActivity extends AppCompatActivity{
             // Set the content view to the wine pager layout:
         setContentView(R.layout.activity_wine_pager);
             // Get the wine id from the intent:
-        int wineId = (int) getIntent().getSerializableExtra(EXTRA_WINE_ID);
+        String wineId = (String) getIntent().getSerializableExtra(EXTRA_WINE_ID);
             // Set the view pager to the correct layout:
         mViewPager = (ViewPager) findViewById(R.id.activity_wine_pager_view_pager);
             // Get the wine item list and save to the local list:

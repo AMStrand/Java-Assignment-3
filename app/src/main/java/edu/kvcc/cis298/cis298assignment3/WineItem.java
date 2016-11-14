@@ -5,7 +5,7 @@ package edu.kvcc.cis298.cis298assignment3;
 public class WineItem {
 
         // Declare the variables that define the WineItem object:
-    private int mId;
+    private String mId;
     private String mDescription;
     private String mPackSize;
     private double mCasePrice;
@@ -17,7 +17,7 @@ public class WineItem {
     }
 
      // 5 Parameter constructor to process WineItems:
-    public WineItem(int id, String description, String packSize, double price, boolean isActive) {
+    public WineItem(String id, String description, String packSize, double price, boolean isActive) {
         mId = id;
         mDescription = description;
         mPackSize = packSize;
@@ -27,11 +27,11 @@ public class WineItem {
 
         // Getters and Setters for the variables:
 
-    public int getmId() {
+    public String getmId() {
         return mId;
     }
 
-    public void setmId(int mId) {
+    public void setmId(String mId) {
         this.mId = mId;
     }
 
