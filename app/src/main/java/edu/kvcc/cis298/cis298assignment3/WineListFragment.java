@@ -48,6 +48,9 @@ public class WineListFragment extends Fragment {
         private TextView mDescriptionTextView;
         private TextView mPriceTextView;
 
+            // Private variable to hold the current wine item:
+        private WineItem mWineItem;
+
             // Override the onClick method:
         @Override
         public void onClick(View view) {
@@ -56,9 +59,6 @@ public class WineListFragment extends Fragment {
             startActivity(intent);
         }
 
-            // Variable to hold a wine item:
-        private WineItem mWineItem;
-
             // Public method to create a wine holder:
         public WineHolder(View itemView) {
             super(itemView);
@@ -66,7 +66,7 @@ public class WineListFragment extends Fragment {
             itemView.setOnClickListener(this);
 
                 // Connect the widgets to the variables:
-            mIdTextView = (TextView) itemView.findViewById(R.id.list_item_wine_description_text_view);
+            mIdTextView = (TextView) itemView.findViewById(R.id.list_item_wine_id_text_view);
             mDescriptionTextView = (TextView) itemView.findViewById(R.id.list_item_wine_description_text_view);
             mPriceTextView = (TextView) itemView.findViewById(R.id.list_item_wine_price_text_view);
         }

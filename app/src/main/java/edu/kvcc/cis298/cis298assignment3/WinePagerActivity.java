@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WinePagerActivity extends AppCompatActivity{
@@ -19,7 +20,7 @@ public class WinePagerActivity extends AppCompatActivity{
         // Create the viewPager object:
     private ViewPager mViewPager;
         // Create a local list to hold the wine items:
-    private List<WineItem> mWineItems;
+    private ArrayList<WineItem> mWineItems;
 
         // Public method to retrieve the intent to begin this activity:
     public static Intent newIntent(Context packageContext, String wineId) {
@@ -41,7 +42,7 @@ public class WinePagerActivity extends AppCompatActivity{
             // Set the view pager to the correct layout:
         mViewPager = (ViewPager) findViewById(R.id.activity_wine_pager_view_pager);
             // Get the wine item list and save to the local list:
-        mWineItems = WineList.get(this).getWineItemList();
+        mWineItems = WineList.getWineItemList();
             // Create a fragment manager to use:
         FragmentManager fragmentManager = getSupportFragmentManager();
             // Set the adapter:

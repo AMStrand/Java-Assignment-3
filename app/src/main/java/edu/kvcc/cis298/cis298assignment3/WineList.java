@@ -14,7 +14,7 @@ public class WineList {
         // Static variable to hold the instance of the WineList:
     private static WineList sWineList;
         // Static list of type WineItem:
-    private static List<WineItem> sWineItemList;
+    private static ArrayList<WineItem> sWineItemList;
         // This context will be the hosting activity, assigned in the constructor:
     private Context mContext;
 
@@ -44,7 +44,7 @@ public class WineList {
     }
 
         // Public static method to get the list of wine items:
-    public static List<WineItem> getWineItemList() {
+    public static ArrayList<WineItem> getWineItemList() {
         return sWineItemList;
     }
 
@@ -53,7 +53,7 @@ public class WineList {
             // Loop through the wine items:
         for (WineItem wineItem : sWineItemList) {
                 // If the id matches, return that wine item:
-            if (wineItem.getmId() == id) {
+            if (wineItem.getmId().equals(id)) {
                 return wineItem;
             }
         }
@@ -84,10 +84,10 @@ public class WineList {
                     // Set a boolean variable to false:
                 boolean bool = false;
                     // If the boolString is "True", change the bool variable to true:
-                if(boolString == "True") {
+                if(boolString.equals("True")) {
                     bool = true;
                 }
-                    // Add a new WineItem to the list by passing in the saved variables:
+                    // Add the new WineItem to the list by passing in the saved variables:
                 sWineItemList.add(new WineItem(id, description, packSize, price, bool));
             }
         }

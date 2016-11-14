@@ -71,4 +71,4 @@ Format with currency symbol: http://stackoverflow.com/questions/10826850/java-st
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-None.
+Clicking on an item in the recycler view does not go to that selected item in the detail view.  I could not figure out where the issue was.  

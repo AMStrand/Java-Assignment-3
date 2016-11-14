@@ -106,7 +106,7 @@ public class WineFragment extends Fragment{
 
             // Connect the widget to the case price variable and set the text:
         mPriceField = (EditText) view.findViewById(R.id.wine_item_price);
-        mPriceField.setText(DecimalFormat.getCurrencyInstance().format(mWineItem.getmCasePrice()));
+        mPriceField.setText(Double.toString(mWineItem.getmCasePrice()));
             // When the text changes...
         mPriceField.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
